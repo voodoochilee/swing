@@ -2,7 +2,6 @@ package swing;
 
 import javax.swing.*;
 
-import javax.swing.JFrame;
 
 public class MainWindow extends JFrame {
 	
@@ -13,16 +12,21 @@ public class MainWindow extends JFrame {
 	private JMenuItem newMenuItem = new JMenuItem("New");
 	private JMenuItem saveMenuItem = new JMenuItem("Save");
 	private JMenuItem saveAsMenuItem = new JMenuItem("Save As...");
+	private JMenuItem cutMenuItem = new JMenuItem("Cut");
+	private JMenuItem copyMenuItem = new JMenuItem("Copy");
+	
 	
 	public MainWindow() {
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-		this.add(menuBar);
+		this.setJMenuBar(menuBar);
 		menuBar.add(fileMenu);
 		menuBar.add(editMenu);
 		menuBar.add(helpMenu);
 		fileMenu.add(newMenuItem);
 		fileMenu.add(saveMenuItem);
 		fileMenu.add(saveAsMenuItem);
+		editMenu.add(cutMenuItem);
+		editMenu.add(copyMenuItem);
 	}
 	
 	public static void main(String[] args) {
