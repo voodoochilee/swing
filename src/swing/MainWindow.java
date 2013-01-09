@@ -20,6 +20,7 @@ public class MainWindow extends JFrame {
 	
 	private JLabel nameLabel = new JLabel("Name");
 	private JTextField nameTextField = new JTextField(20);
+	private JButton submitButton = new JButton("Submit");
 	private JCheckBox qualifiedCheckBox = new JCheckBox("Qualified");
 	private JCheckBox completedCheckBox = new JCheckBox("Completed");
 	
@@ -27,6 +28,7 @@ public class MainWindow extends JFrame {
 	private JRadioButton secondaryRadioButton = new JRadioButton("Secondary");
 	private JRadioButton thirdLevelRadioButton = new JRadioButton("Third Level");
 	private ButtonGroup buttonGroup = new ButtonGroup();
+	private ButtonGroup checkBoxButtonGroup = new ButtonGroup();
 	
 	
 	
@@ -44,14 +46,19 @@ public class MainWindow extends JFrame {
 		editMenu.add(copyMenuItem);
 		this.add(nameLabel);
 		this.add(nameTextField);
+		//this.add(submitButton);
 		this.add(qualifiedCheckBox);
 		this.add(completedCheckBox);
+		checkBoxButtonGroup.add(qualifiedCheckBox);
+		checkBoxButtonGroup.add(completedCheckBox);
+		qualifiedCheckBox.setSelected(true);
 		this.add(primaryRadioButton);
 		this.add(secondaryRadioButton);
 		this.add(thirdLevelRadioButton);
 		buttonGroup.add(primaryRadioButton);
 		buttonGroup.add(secondaryRadioButton);
 		buttonGroup.add(thirdLevelRadioButton);
+		primaryRadioButton.setSelected(true);
 	}
 	
 	public static void main(String[] args) {
