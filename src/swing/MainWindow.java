@@ -73,6 +73,23 @@ public class MainWindow extends JFrame {
 		window.setSize(500, 300);
 		window.setLocationRelativeTo(null);
 		window.setVisible(true);
+		window.playSequenceOfEvents();
+	}
+	
+	private void playSequenceOfEvents() {
+		JOptionPane.showMessageDialog(this, "The app started up ok");
+		int response = JOptionPane.showConfirmDialog(this, "Do you want to continue?", "Continue?", JOptionPane.YES_NO_OPTION);
+		if(response == JOptionPane.YES_OPTION) {
+			System.out.println("You clicked YES");
+		}
+		else if(response == JOptionPane.NO_OPTION) {
+			System.out.println("You clicked NO");
+		}
+		String answer = JOptionPane.showInputDialog(this, "What's the capital of France?");
+		if(answer != null) {
+			System.out.println(answer);
+		}
+		
 	}
 
 }
